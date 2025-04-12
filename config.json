@@ -1,0 +1,91 @@
+json
+{
+  "gesture_actions": {
+    "FIST": {
+      "description": "Hold fist to simulate holding the left mouse button (for dragging).",
+      "type": "mouse_hold",
+      "button": "left"
+    },
+    "OPEN_PALM": {
+      "description": "Open palm enables relative mouse pointer movement.",
+      "type": "mouse_control",
+      "mode": "relative",
+      "sensitivity": 1.5
+    },
+    "THUMBS_UP": {
+      "description": "Thumbs up performs a left mouse click.",
+      "type": "mouse_click",
+      "button": "left"
+    },
+    "THUMBS_DOWN": {
+      "description": "Thumbs down performs a right mouse click.",
+      "type": "mouse_click",
+      "button": "right"
+    },
+    "POINTING_INDEX": {
+      "description": "Pointing index finger scrolls down.",
+      "type": "scroll",
+      "direction": "down",
+      "amount": 60
+    },
+    "VICTORY": {
+      "description": "Victory sign (peace) scrolls up.",
+      "type": "scroll",
+      "direction": "up",
+      "amount": 60
+    },
+    "INDEX_AND_MIDDLE_UP": {
+      "description": "Index and Middle finger up triggers Copy (Ctrl+C).",
+      "type": "key_press",
+      "keys": ["ctrl", "c"]
+    },
+    "SPIDERMAN": {
+      "description": "Spiderman gesture (Thumb, Index, Pinky up) triggers Paste (Ctrl+V).",
+      "type": "key_press",
+      "keys": ["ctrl", "v"]
+    },
+    "OK_SIGN": {
+      "description": "OK sign sends 'LED_ON' command to hardware via Serial.",
+      "type": "hardware_command",
+      "command": "LED_ON\n",
+      "port": "COM3",
+      "baudrate": 9600
+    },
+    "ROCK": {
+      "description": "Rock sign (Fist with Index and Pinky extended) sends 'LED_OFF' command.",
+      "type": "hardware_command",
+      "command": "LED_OFF\n",
+      "port": "COM3",
+      "baudrate": 9600
+    },
+    "CALL_ME": {
+      "description": "Call Me gesture (Thumb and Pinky extended) minimizes all windows (Win+D).",
+      "type": "key_press",
+      "keys": ["win", "d"]
+    },
+    "THREE_FINGERS_UP": {
+        "description": "Index, Middle, Ring finger up triggers Alt+Tab.",
+        "type": "key_press",
+        "keys": ["alt", "tab"]
+    },
+    "DEFAULT_ACTION": {
+      "description": "Default state when no specific gesture is recognized or held.",
+      "type": "noop"
+    }
+  },
+  "settings": {
+    "camera_index": 0,
+    "show_video_feed": true,
+    "show_landmarks": true,
+    "show_gesture_text": true,
+    "flip_camera_horizontally": true,
+    "min_detection_confidence": 0.6,
+    "min_tracking_confidence": 0.6,
+    "gesture_recognition_threshold": 0.85,
+    "gesture_buffer_size": 3,
+    "action_trigger_threshold": 3,
+    "action_repeat_delay_ms": 100,
+    "mouse_smoothing_factor": 0.3,
+    "serial_timeout": 1
+  }
+}

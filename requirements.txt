@@ -1,0 +1,5 @@
+opencv-python (cv2)
+mediapipe
+numpy
+pyautogui (optional, for OS control)
+pyserial (optional, for Arduino/hardware communication)
